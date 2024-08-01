@@ -37,6 +37,10 @@ const Navbar = () => {
         </nav>
       </div>
     </header>
+    <div>
+    <img src='./images/baap_company.png'className='Baap-img' />
+
+    </div>
     </div>
   );
 };
