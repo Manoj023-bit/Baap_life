@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import ImageCarousel from './ImageCarousel';
+import Home from './pages/Home/Home';
 
 const Navbar = () => {
   return (
@@ -14,8 +14,8 @@ const Navbar = () => {
             <span> | </span>
             <a href="tel:+9689092360">Call Us: +91 9689092360</a>
             <span> | </span>
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href=".com"><i className="fab fa-facebook-f"></i></a>
+            <a href=".com"><i className="fab fa-instagram"></i></a>
             <a href="https://www.youtube.com/@baapcompany"><i className="fab fa-youtube"></i></a>
             <a href="https://www.linkedin.com/company/baapcompany/mycompany/"><i className="fab fa-linkedin"></i></a>
           </div>
@@ -32,11 +32,7 @@ const Navbar = () => {
           </nav>
         </div>
       </header>
-      <ImageCarousel />
-      <mark style={{ backgroundColor: 'pink', display: 'block', textAlign: 'center', padding: '10px' }}>
-        The Life School
-</mark>
-     
+    <Home/>
     </div>
     
   );
