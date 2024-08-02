@@ -1,0 +1,39 @@
+
+.body1 {
+  background-image: url(../../../../public/images/school.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.color {  
+  background-color: #45c5c5;
+  border-radius: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
