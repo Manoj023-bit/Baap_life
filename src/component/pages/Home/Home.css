@@ -1,187 +1,230 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
 .carousel {
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 1s ease-in-out;
-  }
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 9%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
 .marquee {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    background-color: blue;
-    height: 7vh;
-    color: white;
-    padding: 10px;
-   
-  }
-  
-  .marquee-content {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 10s linear infinite;
-    font-size: 20px;
-  }
-  
-  @keyframes marquee {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-100%, 0);
-    }
-  }
-  
-  
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: gray;
+  height: 7vh;
+  color: black;
+  padding: 10px;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+  font-size: 20px;
+  font-family: Gilroy, sans-serif;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+.about-the-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px;
+  font-family: baloo2;
+  gap: 95px;
+}
+
+.about-the-image {
+  width: 100%;
+  max-width: 450px;
+  border: 2px solid #f1ecec;
+  padding: 30px;
+  box-sizing: border-box;
+  margin-top: 8%;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.about-the-image:hover {
+  border-color: #ff5733; 
+  transform: scale(1.1); 
+}
+
+.textp {
+  font-size: 1vh;
+  font-family: Gilroy, sans-serif;
+}
+
+.Home-The-Life {
+  font: 40px / 56px Gilroy-Heavy;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
   .about-the-container {
-    display: flex;
+    flex-direction: row;
     align-items: flex-start;
-    padding:100px;
-    font-family: Arial, sans-serif;
+    padding: 100px;
   }
-  
+
   .about-the-image {
-    width: 550px;
     margin-right: 15px;
-    border: 2px solid #f1ecec; 
-    padding: 1px; 
-    box-sizing: border-box; 
+    margin-bottom: 0;
   }
-  
- 
-  
-  .about-the-text {
-    max-width: 550px;
-    margin-top: -8vh; 
-  }
-  
-  .about-the-text h2 {
-    color: #5a2a83; 
-  }
-  
-  .about-strawberry-text p {
-    line-height: 1.6;
-    color: #333;
-  } 
-  
 
+  .about-the-text, .textp {
+    text-align: left;
+    font-family: Gilroy, sans-serif;
+  }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    margin-top: -15vh;
-}
-.title {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-.feature {
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.feature img {
-    max-width: 50px;
-    margin-bottom: 10px;
-}
-.feature h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-
-@media (max-width: 768px) {
-    .feature {
-        width: 45%;
-    }
-}
-@media (max-width: 480px) {
-    .feature {
-        width: 100%;
-    }
-}
-
-
-.statistics-section {
-    position: relative;
-    padding: 40px 20px;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-  }
-  
-  .statistics-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../../../../public/images/Baap_company.png') no-repeat center center;
-    background-size: cover;
-    filter: brightness(50%) contrast(100%) grayscale(100%);
-    z-index: -1;
-  }
-  
-  .statistics-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .statistics-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .statistic-item {
-    flex: 1;
-    min-width: 150px;
-    margin: 10px;
-  }
-  
-  .statistic-icon {
-    font-size: 40px;
-    color: #ffcc00;
-  }
-  
-  .statistic-value {
-    font-size: 36px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: white;
-  }
-  
-  .statistic-label {
-    font-size: 14px;
-    margin-top: 5px;
-    color: white;
-  }
-  .textp{
-    font-weight: 10;
-    font-family: 'Times New Roman', Times, serif;
+  .textp {
     font-size: 3vh;
   }
+}
+
+.about-the-text {
+  max-width: 550px;
+  margin-top: -8vh;
+}
+
+.about-strawberry-text p {
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: -15vh;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.Home-Silent {
+  font-weight: bold;
+  padding: 40px;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.feature {
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.feature img {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .feature {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature {
+    width: 100%;
+  }
+}
+
+.statistics-section {
+  position: relative;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.statistics-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../../../public/images/Baap_company.png") no-repeat center center;
+  background-size: cover;
+  filter: brightness(50%) contrast(100%) grayscale(100%);
+  z-index: -1;
+}
+
+.statistics-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.statistics-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.statistic-item {
+  flex: 1;
+  min-width: 150px;
+  margin: 10px;
+}
+
+.statistic-icon {
+  font-size: 40px;
+  color: #ffcc00;
+  transition: transform 0.3s; 
+}
+
+.statistic-icon:hover {
+  transform: scale(1.2);
+  color: lime;
+}
+
+.statistic-value {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: white;
+}
+
+.statistic-label {
+  font-size: 14px;
+  margin-top: 5px;
+  color: white;
+}

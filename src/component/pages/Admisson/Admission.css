@@ -2,92 +2,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     margin: 0;
-    padding: 20px;
   }
   
-  .form-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #d9d9d9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .mainadd{
+    padding: 70px;
   }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .personal-info,
-  .application-info,
-  .high-school-info {
-    margin-bottom: 20px;
-  }
-  
-  .personal-info h2,
-  .application-info h2,
-  .high-school-info h2 {
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  label input[type="text"],
-  label input[type="date"],
-  label input[type="tel"],
-  label input[type="email"],
-  label input[type="radio"],
-  label select,
-  label textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  label input[type="radio"] {
-    width: auto;
-    margin-right: 10px;
-  }
-  
-  label select {
-    width: auto;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #1302f9;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-    display: block;
-  }
-  

@@ -8,7 +8,7 @@ function RouteSetting() {
     <Routes>
       <Route path="/" element={< CustomNavbar/>} />
       <Route path="/Admission" element={<Admission />} />
-      <Route path="/our students" element={<OurStudents />} />
+      <Route path="/ourstudents" element={<OurStudents />} />
 
     </Routes>
   );
