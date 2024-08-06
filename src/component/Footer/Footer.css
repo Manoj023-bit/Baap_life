@@ -1,0 +1,63 @@
+.footer {
+    background-color: #343a40;
+    margin-top: 100px;
+  }
+  
+  .footer h4,
+  .footer h5 {
+    color: #ffffff;
+  }
+  
+  .footer .text-white {
+    color: #ffffff !important;
+  }
+  
+  .footer .input-group .form-control {
+    border-right: 0;
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .footer .input-group .input-group-append .btn {
+    border-left: 0;
+  }
+  
+  .footer a {
+    color: #ffffff;
+  }
+  
+  .footer a:hover {
+    text-decoration: none;
+    color: #ddd;
+  }
+  
+  .footerl {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem;
+    font-family: Gilroy, sans-serif;
+
+  }
+  
+  .badge {
+    width: 15%;
+  }
+  
+  .horizontal-line {
+    width: 15%;
+    height: 1px;
+    background-color: blue;
+  }
+  
+  .allicon a {
+    font-size: 1.5rem;
+  }
+  
+
+
+  
+  .input-group {
+    display: flex;
+  }

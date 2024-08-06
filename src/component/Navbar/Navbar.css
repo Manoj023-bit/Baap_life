@@ -1,129 +1,151 @@
-
 .custom-navbar {
-    background-color: #f5f5f5;
-  }
-  
-  .custom-navbar .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .custom-navbar .nav-item.nav-text {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-    font-size: 15px;
-    color: black;
-  }
-  
-  .custom-navbar .nav-item.nav-text a {
-    color: black;
-    text-decoration: none;
-  }
-  
-  .custom-navbar .nav-link {
-    font-size: 1rem;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .custom-navbar .nav-link:hover {
-    color: #007bff;
-  }
-  
-.line{
-    font-size: 23px;
-  }
-  
+  background-color: gray;
+}
 
+.custom-navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
+.custom-navbar .nav-item.nav-text {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 15px;
+  color: black;
+}
 
+.custom-navbar .nav-item.nav-text a {
+  color: black;
+  text-decoration: none;
+}
 
+.custom-navbar .nav-link {
+  font-size: 1.2rem;
+}
 
+.custom-navbar .nav-link:hover {
+  color: #007bff;
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
 
-  
+.line {
+  font-size: 23px;
+}
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 5px;
+  background-color: #010505;
+}
+
+@keyframes slideInFade {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
   }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10px;
-    background-color: #00bcd4;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .navbar-logo img {
-    height: 50px;
-  }
-  
+}
+
+.navbar-brand-animated {
+  animation: slideInFade 1s ease-out;
+}
+
+.navbar-logo img {
+  height: 75px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.nav-links li a:hover {
+  color: yellow;
+}
+
+.nav-links li a svg {
+  margin-right: 5px;
+}
+
+.mobile-menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .nav-links {
-    display: flex;
-    list-style: none;
+    display: none;
   }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    margin-top: 13px;
-  }
-  .nav-links li a:hover {
-    color: yellow;
-  }
-  
-  .nav-links li a svg {
-    margin-right: 5px;
-  }
-  
+
   .mobile-menu-icon {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
+    display: block;
   }
-  
+
   .nav-links-mobile {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #00bcd4;
+    padding: 20px 0;
   }
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-  
-    .mobile-menu-icon {
-      display: block;
-    }
-  
-    .nav-links-mobile {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      right: 0;
-      background-color: #00bcd4;
-      padding: 20px 0;
-    }
-  
-    .nav-links-mobile li {
-      text-align: center;
-      margin: 10px 0;
-    }
-  
-    .nav-links-mobile li a {
-      font-size: 20px;
-    }
+
+  .nav-links-mobile li {
+    text-align: center;
+    margin: 10px 0;
   }
-  
+
+  .nav-links-mobile li a {
+    font-size: 20px;
+  }
+}
+
+.Facebook-icon svg:hover {
+  color: #3b5998;
+}
+
+.Instagram-icon svg:hover {
+  color: #e1306c;
+}
+
+.Youtube-icon svg:hover {
+  color: #ff0000;
+}
+
+.Linkedin-icon svg:hover {
+  color: #0077b5;
+}
