@@ -3,7 +3,6 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import Home from '../pages/Home/Home';
 
 const CustomNavbar = () => {
     const [isMobile, setIsMobile] = React.useState(false);
@@ -49,7 +48,6 @@ const CustomNavbar = () => {
                 </nav>
             </div>
 
-            <Home />
         </div> 
     );
 };

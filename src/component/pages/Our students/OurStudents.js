@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './OurStudents.css';
+import CustomNavbar from '../../Navbar/Navbar';
+import Footer from '../../Footer/Footer';
 
 const OurStudent = () => {
   const [isMainHovered, setIsMainHovered] = useState(false);
@@ -127,7 +129,8 @@ const OurStudent = () => {
   };
 
   return (
-    <div className="body1">
+    <div className="body1 mt-5">
+      <CustomNavbar/>
       <div className="button-container">
         <div className="main-button-wrapper">
           <button
@@ -291,6 +294,8 @@ const OurStudent = () => {
     
   </div>
 </div>
+<Footer/>
+
 
     </div>
   );
