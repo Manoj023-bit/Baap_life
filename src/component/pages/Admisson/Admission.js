@@ -1,7 +1,12 @@
 import React, { useState, useRef } from 'react';
-import "./Admission.css"
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "./Admission.css";
+import { Link } from 'react-router-dom';
+
 const Admission = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     firstName: '',
     middleName: '',
     lastName: '',
@@ -9,14 +14,15 @@ const Admission = () => {
     age: '',
     gender: '',
     bloodGroup: '',
-    email: '',
+    emailAddress: '',
     address: '',
     mobileNumber: '',
     applicationId: '',
     admissionYear: '',
     class: ''
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -41,8 +47,8 @@ const Admission = () => {
       valid = false;
     }
 
-    if (!formData.email) {
-      formErrors.email = 'Email is required';
+    if (!formData.emailAddress) {
+      formErrors.emailAddress = 'Email is required';
       valid = false;
     }
 
@@ -65,10 +71,22 @@ const Admission = () => {
     return valid;
   };
 
-  const handleSubmit = (e) => {
+  const handleReset = () => {
+    setFormData(initialFormData); 
+    setErrors({});
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log('Form submitted:', formData);
+      try {
+        const response = await axios.post('http://localhost:5000/api/students', formData);
+        console.log('Form submitted:', response.data);
+        toast.success('Form submitted successfully!');
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        toast.error('Error submitting form.');
+      }
     }
   };
 
@@ -87,7 +105,6 @@ const Admission = () => {
 
   return (
     <div className="container mainadd mt-1">
-
       <form onSubmit={handleSubmit}>
         <div className="row mb-2">
           <div className="col-md-2">
@@ -96,7 +113,6 @@ const Admission = () => {
                 style={{ border: '1px solid #ced4da', borderRadius: '5px', height: '150px', cursor: 'pointer' }}
                 onClick={handleDivClick}
               >
-              
               </div>
               <input
                 type="file"
@@ -222,16 +238,16 @@ const Admission = () => {
         <div className="row mb-3">
           <div className="col-md-4">
             <div className="form-group">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="emailAddress">Email Address</label>
               <input
                 type="email"
-                className={`form-control ${errors.email ? 'is-invalid' : ''}`}
-                id="email"
-                name="email"
-                value={formData.email}
+                className={`form-control ${errors.emailAddress ? 'is-invalid' : ''}`}
+                id="emailAddress"
+                name="emailAddress"
+                value={formData.emailAddress}
                 onChange={handleChange}
               />
-              {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+              {errors.emailAddress && <div className="invalid-feedback">{errors.emailAddress}</div>}
             </div>
           </div>
           <div className="col-md-4">
@@ -305,10 +321,20 @@ const Admission = () => {
             </div>
           </div>
         </div>
-        <button type="submit" className="btn btn-success w-100">
-          Submit
-        </button>
+        <div className="btn-all">
+         <Link to='/'> <button type="button" className="btn btn-success w-10">
+            Home
+          </button>
+          </Link>
+          <button type="submit" className="btn btn-success w-10">
+            Submit
+          </button>
+          <button type="button" onClick={handleReset} className="btn btn-success w-10">
+            Reset
+          </button>
+        </div>
       </form>
+      <ToastContainer />
     </div>
   );
 };
