@@ -4,6 +4,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./Admission.css";
 import { Link } from 'react-router-dom';
+import CustomNavbar from '../../Navbar/Navbar';
+import Footer from '../../Footer/Footer';
 
 const Admission = () => {
   const initialFormData = {
@@ -104,7 +106,9 @@ const Admission = () => {
   };
 
   return (
-    <div className="container mainadd mt-1">
+    <div className='mainadd'>
+    <div className="container ">
+      <CustomNavbar/>
       <form onSubmit={handleSubmit}>
         <div className="row mb-2">
           <div className="col-md-2">
@@ -335,6 +339,11 @@ const Admission = () => {
         </div>
       </form>
       <ToastContainer />
+    </div>
+    <div>
+    <Footer/>
+
+      </div>
     </div>
   );
 };
