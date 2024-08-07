@@ -281,7 +281,7 @@ const OurStudent = () => {
         <Card.Body>
           <Card.Title>Sahil Sonawane</Card.Title>
           <Card.Text>
-           Percentage :- 72%
+           Percentage :- 73%
            University :- Mysore University
           </Card.Text>
           <Button variant="primary">Know More</Button>
