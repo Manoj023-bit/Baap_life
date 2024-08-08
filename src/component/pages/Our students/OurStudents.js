@@ -234,9 +234,9 @@ const OurStudent = () => {
         
         height={300}/>
         <Card.Body>
-          <Card.Title> Coder Swami</Card.Title>
+          <Card.Title> Swaminath kadnar</Card.Title>
           <Card.Text>
-          Percentage :- 32%
+          Percentage :- 35%
           University :- Pune University
           </Card.Text>
           <Button variant="primary">Know More</Button>
