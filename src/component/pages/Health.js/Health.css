@@ -1,0 +1,97 @@
+.health-center {
+    position: relative;
+    text-align: center;
+ color: white;
+  }
+ 
+  .header-health-main {
+    background: url('../../../../public/images/Health.png');
+    background-size: cover;
+    padding: 100px 0;
+   background-position:  center;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    margin-top: 3.50cm;
+  }
+ 
+  .header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+ 
+  .header-health {
+    margin-right: 1cm;
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+  
+  }
+ 
+  .header-health-home {
+    margin-top: 10px;
+ color: white;
+    font-size: 1rem;
+    position: relative;
+    z-index: 2;
+   margin-right: 1cm;
+  }
+ .Health-bg-color{
+    background-color:rgb(243, 224, 224);
+ }
+ 
+.container-the-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header-the-about {
+    text-align: center;
+    padding: 50px 0;
+}
+.header img {
+    max-width: 100%;
+    height: auto;
+}
+.content-health-paragrph {
+    text-align: left;
+    line-height: 1.6;
+}
+.text-content-paragrph{
+    font-family: 'Times New Roman', Times, serif;
+}
+ 
+.baap-school-img{
+    height: 80px;
+    width: 50px;
+}
+ 
+@media (max-width: 768px) {
+    .container-the-fluid {
+        padding: 10px;
+    }
+    .header-the-about {
+        padding: 20px 0;
+    }
+}
+
+.cycle{
+    height: 30vh;
+ 
+}
+
+.card-text-font{
+    font-family: 'Times New Roman', Times, serif;
+}
+.health-text-card{
+    background-color:rgb(249, 239, 239);
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
