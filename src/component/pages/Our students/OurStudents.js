@@ -21,7 +21,7 @@ const OurStudent = () => {
         city: "Mumbai",
       },
       {
-        name: "Swaminath Kadnar",
+        name: "Coder Swami",
         email: "coder@gmail.com",
         branch: "Mumbai",
         grade: "KG",
@@ -39,7 +39,7 @@ const OurStudent = () => {
         city: "Mumbai",
       },
       {
-        name: "Swaminath Kadnar",
+        name: "Coder Swami",
         email: "coder@gmail.com",
         branch: "Mumbai",
         grade: "KG",
@@ -73,7 +73,7 @@ const OurStudent = () => {
     class2: [
       {
         name: "Coder Swami",
-        email: "coder@gmail.com",
+        email: "swami@gmail.com",
         branch: "Pune",
         grade: "Class 2",
         mobile: "9876543211",
@@ -234,7 +234,7 @@ const OurStudent = () => {
         
         height={300}/>
         <Card.Body>
-          <Card.Title>Coder Swami</Card.Title>
+          <Card.Title> Coder Swami</Card.Title>
           <Card.Text>
           Percentage :- 32%
           University :- Pune University
