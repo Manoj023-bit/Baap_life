@@ -36,7 +36,7 @@ const CustomNavbar = () => {
                     </div>
                     <ul className={isMobile ? "nav-links-mobile" : "nav-links"} onClick={() => setIsMobile(false)}>
                         <li><Link to="/"><a href="#home">Home</a></Link></li>
-                        <li><Link to="#about"><a href="#about">About Us</a></Link></li>
+                        <li><Link to="/about"><a href="#about">About Us</a></Link></li>
                         <li><Link to="/admission"><a href="#admissions">Admissions</a></Link></li>
                         <li><Link to="/ourstudents"><a href="#students">Our Students</a></Link></li>
                         <li><Link to="#sports"><a href="#sports">Sports</a></Link></li>
