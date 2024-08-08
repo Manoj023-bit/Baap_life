@@ -21,8 +21,8 @@ const OurStudent = () => {
         city: "Mumbai",
       },
       {
-        name: "Coder Swami",
-        email: "coder@gmail.com",
+        name: "Coder Swaminath",
+        email: "Swami@gmail.com",
         branch: "Mumbai",
         grade: "KG",
         mobile: "9876543210",
@@ -40,7 +40,7 @@ const OurStudent = () => {
       },
       {
         name: "Coder Swami",
-        email: "coder@gmail.com",
+        email: "Swami@gmail.com",
         branch: "Mumbai",
         grade: "KG",
         mobile: "9876543210",
