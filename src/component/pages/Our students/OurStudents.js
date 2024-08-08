@@ -51,7 +51,7 @@ const OurStudent = () => {
     nursery: [
       {
         name: "Samadhan Gudhge",
-        email: "sama@gmail.com",
+        email: "sama1@gmail.com",
         branch: "Mumbai",
         grade: "Nursery",
         mobile: "9876543210",
