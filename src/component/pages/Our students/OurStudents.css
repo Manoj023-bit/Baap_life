@@ -4,14 +4,14 @@
   background-image: url('../../../../public/images/school2.png');
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
   font-family: Arial, sans-serif;
   min-height: 100vh;
-  padding: 100px;
-  text-align: center;
+  padding-top: 100px;
+  /* text-align: center; */
 }
 .button-container {
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .main-button-wrapper {
@@ -80,11 +80,14 @@ th {
 
 
 .h1{
-  color: rgb(253, 249, 0);
+  color: rgb(253, 143, 0);
+  text-align: center;
 }
 
 
 .passout{
   color: #000;
   background-color: white;
+  text-align: center;
+  font-size: 40px;
 }
