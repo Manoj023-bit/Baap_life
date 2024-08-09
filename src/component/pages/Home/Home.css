@@ -3,7 +3,7 @@
   height: 450px;
   overflow: hidden;
   position: relative;
-  margin-top: 10%;
+  margin-top: 9.9%;
 }
 
 .carousel-image {
@@ -17,7 +17,7 @@
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  background-color: gray;
+  background-color: beige;
   height: 7vh;
   color: black;
   padding: 10px;
