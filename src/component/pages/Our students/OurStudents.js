@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './OurStudents.css';
-import CustomNavbar from '../../Navbar/Navbar';
-import Footer from '../../Footer/Footer';
 
 const OurStudent = () => {
   const [isMainHovered, setIsMainHovered] = useState(false);
@@ -29,7 +27,7 @@ const OurStudent = () => {
         year: "2000-2001",
         city: "Nannaj",
       },
-       {
+      {
         name: "Pratik Patil",
         email: "Pratik@gmail.com",
         branch: "Mumbai",
@@ -125,12 +123,11 @@ const OurStudent = () => {
 
   const handleMainButtonClick = () => {
     setIsMainHovered(!isMainHovered);
-    setActiveSubButton(null); 
+    setActiveSubButton(null);
   };
 
   return (
     <div className="body1 mt-5">
-      <CustomNavbar/>
       <div className="button-container">
         <div className="main-button-wrapper">
           <button
@@ -145,7 +142,7 @@ const OurStudent = () => {
                 className="sub-button"
                 onClick={() => setActiveSubButton("all")}
               >
-                All Students  
+                All Students
               </button>
               <button
                 className="sub-button"
@@ -220,83 +217,80 @@ const OurStudent = () => {
                 </tr>
               ))}
             </tbody>
-          </table>  
-         
+          </table>
+
         </div>
-        
+
       )}
-       <div className='footer'>
-  <h1 className='passout'>Some Pass Out Students</h1>
-  <div className="row">
-    <div className="col-md-3">
-      <Card>
-        <Card.Img variant="top" src="https://media.licdn.com/dms/image/D4D03AQGugz_KCLi9QQ/profile-displayphoto-shrink_200_200/0/1708515138790?e=2147483647&v=beta&t=fNXhn-nPUE8NbcSuuTvynoSr216lFYcNe_6w8x2NFLA"
-        
-        height={300}/>
-        <Card.Body>
-          <Card.Title> Swaminath kadnar</Card.Title>
-          <Card.Text>
-          Percentage :- 35%
-          University :- Pune University
-          </Card.Text>
-          <Button variant="primary">Know More</Button>
-        </Card.Body>
-      </Card>
-    </div>
+      <div className='footer'>
+        <h1 className='passout'>Some Pass Out Students</h1>
+        <div className="row">
+          <div className="col-md-3">
+            <Card>
+              <Card.Img variant="top" src="https://media.licdn.com/dms/image/D4D03AQGugz_KCLi9QQ/profile-displayphoto-shrink_200_200/0/1708515138790?e=2147483647&v=beta&t=fNXhn-nPUE8NbcSuuTvynoSr216lFYcNe_6w8x2NFLA"
 
-    <div className="col-md-3">
-      <Card>
-        <Card.Img variant="top" src="https://media.licdn.com/dms/image/D5635AQEsSTKSIeIVdQ/profile-framedphoto-shrink_200_200/0/1695621016301?e=1723615200&v=beta&t=AORk0l-nhuG2VjpO630_DyqKFkLikrn6KwDLu7sjEHM"
-        height={300}
-        />
-        <Card.Body>
-          <Card.Title>Sushant Nehe</Card.Title>
-          <Card.Text>
-          Percentage :- 52%
-          University :- Karntaka University
-          </Card.Text>
-          <Button variant="primary">Know More</Button>
-        </Card.Body>
-      </Card>
-    </div>
+                height={300} />
+              <Card.Body>
+                <Card.Title> Swaminath kadnar</Card.Title>
+                <Card.Text>
+                  Percentage :- 35%
+                  University :- Pune University
+                </Card.Text>
+                <Button variant="primary">Know More</Button>
+              </Card.Body>
+            </Card>
+          </div>
 
-    <div className="col-md-3">
-      <Card>
-        <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7tZublUU3su05AsnJatPqTMHVcmkQp2hYwg&s"
-         height={300}
-        />
-        <Card.Body>
-          <Card.Title>Vaibhav Sonawane</Card.Title>
-          <Card.Text>
-          Percentage :- 89%
-          University :- Mumbai University
-          </Card.Text>
-          <Button variant="primary">Know More</Button>
-        </Card.Body>
-      </Card>
-    </div>
+          <div className="col-md-3">
+            <Card>
+              <Card.Img variant="top" src="https://media.licdn.com/dms/image/D5635AQEsSTKSIeIVdQ/profile-framedphoto-shrink_200_200/0/1695621016301?e=1723615200&v=beta&t=AORk0l-nhuG2VjpO630_DyqKFkLikrn6KwDLu7sjEHM"
+                height={300}
+              />
+              <Card.Body>
+                <Card.Title>Sushant Nehe</Card.Title>
+                <Card.Text>
+                  Percentage :- 52%
+                  University :- Karntaka University
+                </Card.Text>
+                <Button variant="primary">Know More</Button>
+              </Card.Body>
+            </Card>
+          </div>
 
-    <div className="col-md-3">
-      <Card>
-        <Card.Img variant="top" src="https://media.licdn.com/dms/image/D5603AQEEd7KfvdWVdw/profile-displayphoto-shrink_200_200/0/1697860651684?e=1728518400&v=beta&t=JSHl6nWaWv0RmPNaQH5N9g8u70Upx3uxeOprPTJ6WB8"
-        height={300}
-        />
-        <Card.Body>
-          <Card.Title>Sahil Sonawane</Card.Title>
-          <Card.Text>
-           Percentage :- 73%
-           University :- Mysore University
-          </Card.Text>
-          <Button variant="primary">Know More</Button>
-        </Card.Body>
-      </Card>
-    </div>
-    
-  </div>
-</div>
-<Footer/>
+          <div className="col-md-3">
+            <Card>
+              <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7tZublUU3su05AsnJatPqTMHVcmkQp2hYwg&s"
+                height={300}
+              />
+              <Card.Body>
+                <Card.Title>Vaibhav Sonawane</Card.Title>
+                <Card.Text>
+                  Percentage :- 89%
+                  University :- Mumbai University
+                </Card.Text>
+                <Button variant="primary">Know More</Button>
+              </Card.Body>
+            </Card>
+          </div>
 
+          <div className="col-md-3">
+            <Card>
+              <Card.Img variant="top" src="https://media.licdn.com/dms/image/D5603AQEEd7KfvdWVdw/profile-displayphoto-shrink_200_200/0/1697860651684?e=1728518400&v=beta&t=JSHl6nWaWv0RmPNaQH5N9g8u70Upx3uxeOprPTJ6WB8"
+                height={300}
+              />
+              <Card.Body>
+                <Card.Title>Sahil Sonawane</Card.Title>
+                <Card.Text>
+                  Percentage :- 73%
+                  University :- Mysore University
+                </Card.Text>
+                <Button variant="primary">Know More</Button>
+              </Card.Body>
+            </Card>
+          </div>
 
+        </div>
+      </div>
     </div>
   );
 };

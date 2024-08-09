@@ -1,14 +1,9 @@
 
 import React from 'react';
 import './About.css';
-import Footer from '../../Footer/Footer';
-import CustomNavbar from '../../Navbar/Navbar';
 const About = () => {
     return (
        <>
-     <div>
-        <CustomNavbar/>
-     </div>
         <div className='About'>
             <div className="aboutcontainer">
                 <div className="about-breadcrumb">
@@ -53,9 +48,6 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-            </div>
-            <div>
-                <Footer />
             </div>
         </div>
         </>

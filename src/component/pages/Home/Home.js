@@ -2,9 +2,6 @@ import React from "react";
 import "./Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
-import Footer from "../../Footer/Footer";
-import CustomNavbar from "../../Navbar/Navbar";
-
 
 const statisticsData = [
   { value: 20, label: "Years Of Experience" },
@@ -44,7 +41,6 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        < CustomNavbar/>
         {/* carousel */}
         <div className="carousel">
           <img
@@ -152,7 +148,6 @@ class Home extends React.Component {
             ))}
           </div>
         </div>
-<Footer/>
       </div>
     );
   }

@@ -1,15 +1,10 @@
 import React from 'react'
 import './Health.css'
-import Footer from '../../Footer/Footer'
-import CustomNavbar from '../../Navbar/Navbar'
 
 export default function Health() {
   return (
     <>
-   <div><CustomNavbar/>
-    </div>
     <div className='Health-bg-color'>
-
     <div className="health-center">
       <div className="header-health-main ">
         <h1 className='header-health'>Health Center</h1>
@@ -68,9 +63,6 @@ export default function Health() {
           
         </div>
     </div>
-   <div>
-    <Footer/>
-   </div>
  </div>
  </>
   )
