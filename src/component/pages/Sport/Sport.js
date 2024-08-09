@@ -130,7 +130,7 @@ const Sport = () => {
       </div>
 <br></br>
 
-<div className="container">
+<div className="container1">
   <h1 className="title1">12 months to 12 years</h1>
           
       <h3 className="subtitle">Multi-sport to sport-specific</h3>
