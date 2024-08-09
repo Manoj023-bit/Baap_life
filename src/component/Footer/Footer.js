@@ -67,17 +67,19 @@ const Footer = () => {
                     </li>
                     <li>
                       <a href="#!" className="text-white">
-                        <FaAngleRight /> Vision & Mission
+                        <FaAngleRight /> Admissions
                       </a>
                     </li>
                     <li>
                       <a href="#!" className="text-white">
-                        <FaAngleRight /> News
+                        <FaAngleRight /> Sports
+
                       </a>
                     </li>
                     <li>
                       <a href="#!" className="text-white">
-                        <FaAngleRight /> Emblem
+                        <FaAngleRight /> 
+                        Choose a Theme
                       </a>
                     </li>
                   </ul>
@@ -91,12 +93,12 @@ const Footer = () => {
                     </li>
                     <li>
                       <a href="#!" className="text-white">
-                        <FaAngleRight /> Gallery
+                        <FaAngleRight /> Our Students
                       </a>
                     </li>
                     <li>
                       <a href="#!" className="text-white">
-                        <FaAngleRight /> Blog
+                        <FaAngleRight /> Health & Safety
                       </a>
                     </li>
                     <li>

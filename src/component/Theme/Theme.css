@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
+
+:root,
+:root[data-theme="light"] {
+	--light-background: #ffffff;
+	--text-on-light: #000000;
+
+	--dark-background: #333333;
+	--text-on-dark: #ffffff;
+
+	--pink-background: #ff66b2;
+	--text-on-pink: #ffffff;
+
+	--blue-background: #3399ff;
+	--text-on-blue: #ffffff;
+
+	--yellow-background: #ffff66;
+	--text-on-yellow: #000000;
+
+	--bg-color: var(--light-background);
+	--text-color: var(--text-on-light);
+}
+
+:root[data-theme="pink"] {
+	--bg-color: var(--pink-background);
+	--text-color: var(--text-on-pink);
+}
+
+:root[data-theme="blue"] {
+	--bg-color: var(--blue-background);
+	--text-color: var(--text-on-blue);
+}
+
+:root[data-theme="dark"] {
+	--bg-color: var(--dark-background);
+	--text-color: var(--text-on-dark);
+}
+
+:root[data-theme="yellow"] {
+	--bg-color: var(--yellow-background);
+	--text-color: var(--text-on-yellow);
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+.visually-hidden {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.theme-container {
+	position: relative;
+	display: inline-block;
+    margin-top: 20px;
+}
+
+.dropdown-button {
+	background-color: black;
+	color: #fff;
+	border: none;
+	padding: 0.5em 1em;
+	border-radius: 0.5em;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: bold;
+	transition: background-color 0.3s, color 0.3s; 
+}
+
+.dropdown-button:hover {
+	color: yellow; 
+}
+
+
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 0.5em;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	padding: 0;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.theme-option {
+	width: 80%;
+	height: 2.5em;
+	margin: 0.5em 0;
+	border-radius: 0.5em;
+	border: 1px solid transparent;
+	background-color: #ddd;
+	cursor: pointer;
+	font-size: 1rem;
+	color: #333;
+	text-transform: capitalize;
+	font-weight: bold;
+	transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.theme-option.active {
+	background-color: #111;
+	color: #fff;
+	border-color: #111;
+	transform: scale(1.1);
+}
+
+.theme-option:hover {
+	background-color: #eee;
+}
