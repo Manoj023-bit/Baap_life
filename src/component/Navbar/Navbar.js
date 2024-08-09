@@ -39,8 +39,8 @@ const CustomNavbar = () => {
                         <li><Link to="/about"><a href="#about">About Us</a></Link></li>
                         <li><Link to="/admission"><a href="#admissions">Admissions</a></Link></li>
                         <li><Link to="/ourstudents"><a href="#students">Our Students</a></Link></li>
-                        <li><Link to="#sports"><a href="#sports">Sports</a></Link></li>
-                        <li><Link to="/health"><a href="#health">Health & Safety</a></Link></li>
+                        <li><Link to="/sports"><a href="#sports">Sports</a></Link></li>
+                        <li><Link to="#health"><a href="#health">Health & Safety</a></Link></li>
                     </ul>
                     <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
                         {isMobile ? <FaTimes /> : <FaBars />}

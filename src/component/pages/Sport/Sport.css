@@ -1,0 +1,306 @@
+.slider-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.main_div {
+  display: flex;
+  justify-content: space-around;
+  background-color: #343a40;
+  width: 100%;
+  height: 660px;
+}
+
+.first_div {
+  width: 50%;
+  height: 100%;
+ 
+  padding-top: 150px;
+padding-left: 18px;}
+
+.first_div h1 {
+  color: aliceblue;
+  font-size: 32px;
+  font-weight: bold;
+
+
+  
+}
+
+
+.first_div h4 {
+  color: aliceblue;
+  font-size: 19px;
+}
+.Sec_div{
+  margin-top: 70px;
+}
+
+.Health {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Health-fit {
+
+  height: 90px;
+  width: 90px;
+  background-color: #215504;
+  border-radius: 100px;
+  margin-right: 20px;
+}
+
+.Health-fit h5 {
+  margin-left: 19px;
+  margin-top: 20px;
+  font-size: 15px;
+  color: aliceblue;
+}
+
+.Health_imp h1 {
+  color: aliceblue;
+  font-size: 30px;
+  margin-right: 100;
+}
+
+.Health_imp p {
+  color: aliceblue;
+  margin-bottom: 50px;
+
+}
+
+
+.Achievement {
+
+  height: 90px;
+  width: 90px;
+  background-color: #0b3c58;
+  border-radius: 100px;
+  margin-right: 20px;
+}
+
+.Achievement h5 {
+  color: aliceblue;
+  font-size: 12px;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+.Achievement_imp h1{
+color: aliceblue;
+margin-left: 10px;
+font-size: 30px;
+}
+.Achievement_imp p{
+  color: aliceblue;
+  margin-left: 10px;
+  }
+
+.Life_Skills {
+
+  height: 90px;
+  width: 90px;
+  background-color: #e91ea5;
+  border-radius: 100px;
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
+.Life_Skills h5 {
+  color: aliceblue;
+  font-size: 12px;
+  margin-top: 36px;
+  margin-left: 17px;
+  
+
+}
+
+.Love_sport {
+
+  height: 90px;
+  width: 90px;
+  background-color: #f02c1e;
+  border-radius: 100px;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+.Love_sport h5 {
+  color: aliceblue;
+  margin-left: 22px;
+}
+
+.Skill_imp h1 {
+  color: aliceblue;
+  font-size: 30px;
+}
+
+.Skill_imp p {
+  color: aliceblue;
+}
+
+.Skill_imp {
+  margin-right: 25px;
+  margin-top: 22px;
+}
+
+.Sport_imp {
+  margin-left: 35px;
+}
+
+.Sport_imp h1 {
+  color: aliceblue;
+  font-size: 30px;
+  margin-top: 38px;
+  margin-left: 10px;
+}
+
+.Sport_imp p {
+  color: aliceblue;
+  margin-left: 10px;
+}
+
+
+.Sport {
+
+  height: 90px;
+  width: 90px;
+  background-color: #f02c1e;
+  border-radius: 100px;
+  margin-top: 50px;
+  margin-left: 12px;
+
+}
+
+.Sport h5 {
+  color: aliceblue;
+  margin-left: 23px;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.year_section{
+  background-color: #343a40;
+  width: 100%;
+  height: 350px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50PX;
+}
+
+.year2{
+
+  height: 300px;
+  width: 300px;
+  background-color:rgb(250, 66, 66) ;
+  border-radius: 100%;
+}
+.year5{
+  height: 300px;
+  width: 300px;
+  background-color: #ffed4b;
+  border-radius: 100%;
+
+}
+.year12{
+  height: 300px;
+  width: 300px;
+  background-color: #5fda17;
+  border-radius: 100%;
+
+}
+
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #343a40;
+  margin-top: 30px;
+
+ 
+}
+
+.title1{
+  color: white;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.circles {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* .circle-title {
+  font-size: 1.5rem;
+ 
+  color: #fff;
+}
+
+.circle-subtitle {
+  font-size: 1.25rem;
+
+  color: #fff;
+} */
+
+.circle-dots {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.1rem;
+  padding-top: 0px;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.circle-text {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  font-size: 13PX;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.circleh1{
+color: aliceblue;
+font-size: 17px;
+font-weight: bold;
+}
+
+.circleh2{
+
+  color: aliceblue;
+  font-size: 17px;
+ margin-bottom: 20px;
+ font-weight: bold;
+}
