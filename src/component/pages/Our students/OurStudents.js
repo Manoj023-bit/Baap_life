@@ -231,7 +231,7 @@ const OurStudent = () => {
 
                 height={300} />
               <Card.Body>
-                <Card.Title> Swaminath kadnar</Card.Title>
+                <Card.Title> Coder Swami</Card.Title>
                 <Card.Text>
                   Percentage :- 35%
                   University :- Pune University
