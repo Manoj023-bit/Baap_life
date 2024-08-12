@@ -68,12 +68,12 @@ padding-left: 31px;}
   margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
-  padding-top: 50PX;
+  padding-top: 51PX;
 }
 
 .year2{
 
-  height: 300px;
+  height: 301px;
   width: 300px;
   background-color:rgb(250, 66, 66) ;
   border-radius: 100%;
