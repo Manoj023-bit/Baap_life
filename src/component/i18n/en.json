@@ -1,0 +1,106 @@
+{
+  "navbar": {
+    "brand": "The Life School",
+    "mail": "Mail Us",
+    "call": "Call Us",
+    "home": "Home",
+    "about": "About Us",
+    "admissions": "Admissions",
+    "students": "Our Students",
+    "sports": "Sports",
+    "health": "Health & Safety",
+    "language": "Language"
+  },
+  "home": {
+    "carouselAlt": "carousel",
+    "marqueeText": "The Life School Developed By the baap company Pvt. Ltd.",
+    "aboutTitle": "The Life School",
+    "aboutParagraph1": "The Life School is an innovative educational institution dedicated to holistic development, emphasizing not just academic excellence but also personal growth and life skills.",
+    "aboutParagraph2": "At The Life School, students are encouraged to explore their passions, develop critical thinking, and engage in real-world problem-solving.",
+    "aboutParagraph3": "The curriculum is designed to be dynamic and responsive, integrating traditional subjects with experiential learning opportunities such as community service, internships, and global exchanges.",
+    "aboutParagraph4": "By fostering a supportive and inclusive environment, The Life School aims to nurture well-rounded individuals who are prepared to thrive in an ever-changing world.",
+    "silentFeatures": "Silent Features",
+    "feature1": "Modern Labs with AI & Robotics",
+    "feature2": "Skills for Creativity & Artistic Thinking",
+    "feature3": "State of the Art Classrooms",
+    "feature4": "Safe & Secured Campus",
+    "statisticsTitle": "Statistics",
+    "yearsOfExperience": "Years Of Experience",
+    "numberOfSchools": "Number Of Schools",
+    "numberOfStudents": "Number Of Students",
+    "presenceInCities": "Presence In Number Of Cities",
+    "numberOfEmployees": "Number Of Employees"
+  },
+  "formLabels": {
+    "firstName": "First Name",
+    "middleName": "Middle Name",
+    "lastName": "Last Name",
+    "birthDay": "Birth Day",
+    "age": "Age",
+    "gender": "Gender",
+    "bloodGroup": "Blood Group",
+    "emailAddress": "Email Address",
+    "address": "Address",
+    "mobileNumber": "Mobile Number",
+    "applicationId": "Application ID",
+    "admissionYear": "Admission Year",
+    "class": "Class",
+    "select": "Select",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other"
+  },
+  "errors": {
+    "firstNameRequired": "First Name is required",
+    "lastNameRequired": "Last Name is required",
+    "emailRequired": "Email is required",
+    "mobileNumberRequired": "Mobile Number is required",
+    "admissionYearRequired": "Admission Year is required",
+    "classRequired": "Class is required"
+  },
+  "messages": {
+    "submitSuccess": "Form submitted successfully!",
+    "submitError": "Error submitting form."
+  },
+  "buttons": {
+    "home": "Home",
+    "submit": "Submit",
+    "reset": "Reset"
+  },
+  "about": {
+    "title": "About School",
+    "school_name": "The Life School",
+    "school_description": "The BAAP Life Education Society was established in 2024 with the motive to educate society, fulfilling the social responsibility towards empowering rural areas with quality education. The motive of the The Life School lies in the saying, “If you want to grow a person for life, give resources to earn. If you want the growth of a village, provide resources for good agriculture. If you want the growth of a society for generations, just educate them.”",
+    "teaching_class": "THE LIFE SCHOOL TEACHING CLASS",
+    "teaching_class_description": "To provide quality education, The Life School Education Society started Strawberry English Medium School in 2024. Within a short period, the school established itself as a center for quality education and a temple of spiritual and moral learning. This environment is built in a way that your progress will almost feel serendipitous. The temple of Humanity is built on the foundation of moral character and ethical values.",
+    "library_info": "THE LIFE SCHOOL LIBRARY",
+    "library_info_description": "The greatest benefit for many is having fewer distractions. At home, one might have to contend with roommates, pets, and other temptations. The library provides a wealth of educational resources that can aid in studies, away from distractions."
+  },
+  "students": {
+    "showData": "Show All Student Data",
+    "hideData": "Hide Student Data",
+    "allStudents": "All Students",
+    "kg": "KG Students",
+    "nursery": "Nursery Students",
+    "class1": "Class 1 Students",
+    "class2": "Class 2 Students",
+    "class3": "Class 3 Students",
+    "class4": "Class 4 Students",
+    "name": "Student Name",
+    "email": "Email",
+    "branch": "School Branch",
+    "grade": "Grade",
+    "mobile": "Mobile",
+    "year": "Academic Year",
+    "city": "City Name",
+    "passout": "Some Pass Out Students"
+  },
+  "theme": {
+    "chooseTheme": "Choose a Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "pink": "Pink",
+    "blue": "Blue",
+    "yellow": "Yellow"
+  }
+}

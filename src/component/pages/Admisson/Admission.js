@@ -4,6 +4,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./Admission.css";
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
+
 const Admission = () => {
   const initialFormData = {
     firstName: '',
@@ -20,6 +23,7 @@ const Admission = () => {
     admissionYear: '',
     class: ''
   };
+  const { t } = useTranslation();
 
   const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
@@ -37,32 +41,32 @@ const Admission = () => {
     let valid = true;
 
     if (!formData.firstName) {
-      formErrors.firstName = 'First Name is required';
+      formErrors.firstName = t('errors.firstNameRequired');
       valid = false;
     }
 
     if (!formData.lastName) {
-      formErrors.lastName = 'Last Name is required';
+      formErrors.lastName = t('errors.lastNameRequired');
       valid = false;
     }
 
     if (!formData.emailAddress) {
-      formErrors.emailAddress = 'Email is required';
+      formErrors.emailAddress = t('errors.emailRequired');
       valid = false;
     }
 
     if (!formData.mobileNumber) {
-      formErrors.mobileNumber = 'Mobile Number is required';
+      formErrors.mobileNumber = t('errors.mobileNumberRequired');
       valid = false;
     }
 
     if (!formData.admissionYear) {
-      formErrors.admissionYear = 'Admission Year is required';
+      formErrors.admissionYear = t('errors.admissionYearRequired');
       valid = false;
     }
 
     if (!formData.class) {
-      formErrors.class = 'Class is required';
+      formErrors.class = t('errors.classRequired');
       valid = false;
     }
 
@@ -81,10 +85,10 @@ const Admission = () => {
       try {
         const response = await axios.post('http://localhost:5000/api/students', formData);
         console.log('Form submitted:', response.data);
-        toast.success('Form submitted successfully!');
+        toast.success(t('messages.submitSuccess'));
       } catch (error) {
         console.error('Error submitting form:', error);
-        toast.error('Error submitting form.');
+        toast.error(t('messages.submitError'));
       }
     }
   };
@@ -128,7 +132,7 @@ const Admission = () => {
               <div className="row">
                 <div className="col-md-4">
                   <div className="form-group">
-                    <label htmlFor="firstName">First Name</label>
+                    <label htmlFor="firstName">{t('formLabels.firstName')}</label>
                     <input
                       type="text"
                       className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
@@ -142,7 +146,7 @@ const Admission = () => {
                 </div>
                 <div className="col-md-4">
                   <div className="form-group">
-                    <label htmlFor="middleName">Middle Name</label>
+                    <label htmlFor="middleName">{t('formLabels.middleName')}</label>
                     <input
                       type="text"
                       className="form-control"
@@ -155,7 +159,7 @@ const Admission = () => {
                 </div>
                 <div className="col-md-4">
                   <div className="form-group">
-                    <label htmlFor="lastName">Last Name</label>
+                    <label htmlFor="lastName">{t('formLabels.lastName')}</label>
                     <input
                       type="text"
                       className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
@@ -171,7 +175,7 @@ const Admission = () => {
             </div>
             <div className="col-md-4">
               <div className="form-group">
-                <label htmlFor="birthDay">Birth Day</label>
+                <label htmlFor="birthDay">{t('formLabels.birthDay')}</label>
                 <input
                   type="date"
                   className="form-control"
@@ -184,7 +188,7 @@ const Admission = () => {
             </div>
             <div className="col-md-2">
               <div className="form-group">
-                <label htmlFor="age">Age</label>
+                <label htmlFor="age">{t('formLabels.age')}</label>
                 <input
                   type="number"
                   className="form-control"
@@ -197,7 +201,7 @@ const Admission = () => {
             </div>
             <div className="col-md-2">
               <div className="form-group">
-                <label htmlFor="gender">Gender</label>
+                <label htmlFor="gender">{t('formLabels.gender')}</label>
                 <select
                   className="form-control"
                   id="gender"
@@ -205,16 +209,16 @@ const Admission = () => {
                   value={formData.gender}
                   onChange={handleChange}
                 >
-                  <option value="">Select</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
+                  <option value="">{t('formLabels.select')}</option>
+                  <option value="Male">{t('formLabels.male')}</option>
+                  <option value="Female">{t('formLabels.female')}</option>
+                  <option value="Other">{t('formLabels.other')}</option>
                 </select>
               </div>
             </div>
             <div className="col-md-2">
               <div className="form-group">
-                <label htmlFor="bloodGroup">Blood Group</label>
+                <label htmlFor="bloodGroup">{t('formLabels.bloodGroup')}</label>
                 <select
                   className="form-control"
                   id="bloodGroup"
@@ -222,7 +226,7 @@ const Admission = () => {
                   value={formData.bloodGroup}
                   onChange={handleChange}
                 >
-                  <option value="">Select</option>
+                  <option value="">{t('formLabels.select')}</option>
                   <option value="A+">A+</option>
                   <option value="A-">A-</option>
                   <option value="B+">B+</option>
@@ -238,7 +242,7 @@ const Admission = () => {
           <div className="row mb-3">
             <div className="col-md-4">
               <div className="form-group">
-                <label htmlFor="emailAddress">Email Address</label>
+                <label htmlFor="emailAddress">{t('formLabels.emailAddress')}</label>
                 <input
                   type="email"
                   className={`form-control ${errors.emailAddress ? 'is-invalid' : ''}`}
@@ -252,7 +256,7 @@ const Admission = () => {
             </div>
             <div className="col-md-4">
               <div className="form-group">
-                <label htmlFor="address">Address</label>
+                <label htmlFor="address">{t('formLabels.address')}</label>
                 <input
                   type="text"
                   className="form-control"
@@ -265,7 +269,7 @@ const Admission = () => {
             </div>
             <div className="col-md-4">
               <div className="form-group">
-                <label htmlFor="mobileNumber">Mobile Number</label>
+                <label htmlFor="mobileNumber">{t('formLabels.mobileNumber')}</label>
                 <input
                   type="tel"
                   className={`form-control ${errors.mobileNumber ? 'is-invalid' : ''}`}
@@ -281,7 +285,7 @@ const Admission = () => {
           <div className="row mb-3">
             <div className="col-md-4">
               <div className="form-group">
-                <label htmlFor="applicationId">Application Id</label>
+                <label htmlFor="applicationId">{t('formLabels.applicationId')}</label>
                 <input
                   type="text"
                   className="form-control"
@@ -294,7 +298,7 @@ const Admission = () => {
             </div>
             <div className="col-md-4">
               <div className="form-group">
-                <label htmlFor="admissionYear">Admission Year</label>
+                <label htmlFor="admissionYear">{t('formLabels.admissionYear')}</label>
                 <input
                   type="number"
                   className={`form-control ${errors.admissionYear ? 'is-invalid' : ''}`}
@@ -308,7 +312,7 @@ const Admission = () => {
             </div>
             <div className="col-md-4">
               <div className="form-group">
-                <label htmlFor="class">Class</label>
+                <label htmlFor="class">{t('formLabels.class')}</label>
                 <input
                   type="text"
                   className={`form-control ${errors.class ? 'is-invalid' : ''}`}
@@ -323,14 +327,14 @@ const Admission = () => {
           </div>
           <div className="btn-all">
             <Link to='/'> <button type="button" className="btn btn-success w-10">
-              Home
+              {t('buttons.home')}
             </button>
             </Link>
             <button type="submit" className="btn btn-success w-10">
-              Submit
+              {t('buttons.submit')}
             </button>
             <button type="button" onClick={handleReset} className="btn btn-success w-10">
-              Reset
+              {t('buttons.reset')}
             </button>
           </div>
         </form>
@@ -340,4 +344,4 @@ const Admission = () => {
   );
 };
 
-export default Admission;
+export default withTranslation()  (Admission);

@@ -7,6 +7,8 @@ import Home from "./component/pages/Home/Home"
 import About from "./component/pages/About/About"
 import Sport from "./component/pages/Sport/Sport";
 import Health       from "./component/pages/Health/Health";
+import './component/i18n/i18n';
+
 function RouteSetting() {
   return (
     <Routes>
