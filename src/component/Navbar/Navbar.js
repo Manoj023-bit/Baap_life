@@ -35,10 +35,10 @@ const CustomNavbar = () => {
               <Nav.Link href="#" className='Youtube-icon'><FaYoutube /></Nav.Link>
               <Nav.Link href="#" className='Linkedin-icon'><FaLinkedinIn /></Nav.Link>
               <li>
-              <button className='btn btn-outline-primary ml-2' onClick={() => changeLanguage('en')}>English</button>
-              <button className='btn btn-outline-primary ml-2' onClick={() => changeLanguage('mr')}>Marathi</button>
-            </li>
- 
+                <button className='btn btn-outline-primary ml-2' onClick={() => changeLanguage('en')}>English</button>
+                <button className='btn btn-outline-primary ml-2' onClick={() => changeLanguage('mr')}>Marathi</button>
+              </li>
+
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -54,9 +54,9 @@ const CustomNavbar = () => {
             <li><Link to="/sports"><a href="#sports">{t('navbar.sports')}</a></Link></li>
             <li><Link to="/health"><a href="#health">{t('navbar.health')}</a></Link></li>
 
-<li className='mr-5'>
-<Theme/>
-</li>          </ul>
+            <li className='mr-5'>
+              <Theme />
+            </li>          </ul>
           <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
             {isMobile ? <FaTimes /> : <FaBars />}
           </button>
