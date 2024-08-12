@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Theme.css';
 
 function Theme() {
   const [theme, setTheme] = useState('light');
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     document.querySelector('html').setAttribute('data-theme', theme);
@@ -28,7 +30,7 @@ function Theme() {
         onClick={() => setDropdownOpen(!dropdownOpen)}
         aria-expanded={dropdownOpen}
       >
-        Choose a Theme
+        {t('theme.chooseTheme')}
       </button>
       {dropdownOpen && (
         <div className="dropdown-menu">
@@ -40,7 +42,7 @@ function Theme() {
               onClick={() => handleChange(themeName)}
               aria-pressed={theme === themeName}
             >
-              {themeName.charAt(0).toUpperCase() + themeName.slice(1)}
+              {t(`theme.${themeName}`)}
             </button>
           ))}
         </div>

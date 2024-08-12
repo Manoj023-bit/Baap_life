@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './OurStudents.css';
+import { useTranslation } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 const OurStudent = () => {
   const [isMainHovered, setIsMainHovered] = useState(false);
   const [activeSubButton, setActiveSubButton] = useState(null);
+  const { t } = useTranslation();
 
   const studentData = {
     kg: [
@@ -25,24 +28,6 @@ const OurStudent = () => {
         grade: "KG",
         mobile: "9876543210",
         year: "2000-2001",
-        city: "Nannaj",
-      },
-      {
-        name: "Pratik Patil",
-        email: "Pratik@gmail.com",
-        branch: "Mumbai",
-        grade: "KG",
-        mobile: "9876543210",
-        year: "2000-2001",
-        city: "Mumbai",
-      },
-      {
-        name: "Coder Swami",
-        email: "Swami@gmail.com",
-        branch: "Mumbai",
-        grade: "KG",
-        mobile: "9876543210",
-        year: "2002-2003",
         city: "Nannaj",
       },
     ],
@@ -96,7 +81,7 @@ const OurStudent = () => {
         grade: "Class 3",
         mobile: "7071313177",
         year: "2023-2024",
-        city: "ozar",
+        city: "Ozar",
       },
     ],
     class4: [
@@ -134,7 +119,7 @@ const OurStudent = () => {
             className="hover-button"
             onClick={handleMainButtonClick}
           >
-            {isMainHovered ? 'Hide Student Data' : 'Show All Student Data'}
+            {isMainHovered ? t('students.hideData') : t('students.showData')}
           </button>
           {isMainHovered && (
             <div className="sub-buttons-container">
@@ -142,43 +127,43 @@ const OurStudent = () => {
                 className="sub-button"
                 onClick={() => setActiveSubButton("all")}
               >
-                All Students
+                {t('students.allStudents')}
               </button>
               <button
                 className="sub-button"
                 onClick={() => setActiveSubButton("kg")}
               >
-                KG Students
+                {t('students.kg')}
               </button>
               <button
                 className="sub-button"
                 onClick={() => setActiveSubButton("nursery")}
               >
-                Nursery Students
+                {t('students.nursery')}
               </button>
               <button
                 className="sub-button"
                 onClick={() => setActiveSubButton("class1")}
               >
-                Class 1 Students
+                {t('students.class1')}
               </button>
               <button
                 className="sub-button"
                 onClick={() => setActiveSubButton("class2")}
               >
-                Class 2 Students
+                {t('students.class2')}
               </button>
               <button
                 className="sub-button"
                 onClick={() => setActiveSubButton("class3")}
               >
-                Class 3 Students
+                {t('students.class3')}
               </button>
               <button
                 className="sub-button"
                 onClick={() => setActiveSubButton("class4")}
               >
-                Class 4 Students
+                {t('students.class4')}
               </button>
             </div>
           )}
@@ -187,18 +172,18 @@ const OurStudent = () => {
       {isMainHovered && activeSubButton && (
         <div className="table-container">
           <h1 className='h1'>
-            {activeSubButton.replace(/^\w/, (c) => c.toUpperCase()).replace(/([A-Z])/g, ' $1').trim()} Students
+            {t(`students.${activeSubButton}`)}
           </h1>
           <table>
             <thead>
               <tr>
-                <th>Student Name</th>
-                <th>Email</th>
-                <th>School Branch</th>
-                <th>Grade</th>
-                <th>Mobile</th>
-                <th>Academic Year</th>
-                <th>City Name</th>
+                <th>{t('students.name')}</th>
+                <th>{t('students.email')}</th>
+                <th>{t('students.branch')}</th>
+                <th>{t('students.grade')}</th>
+                <th>{t('students.mobile')}</th>
+                <th>{t('students.year')}</th>
+                <th>{t('students.city')}</th>
               </tr>
             </thead>
             <tbody>
@@ -218,22 +203,19 @@ const OurStudent = () => {
               ))}
             </tbody>
           </table>
-
         </div>
-
       )}
       <div className='footer'>
-        <h1 className='passout'>Some Pass Out Students</h1>
+        <h1 className='passout'>{t('students.passout')}</h1>
         <div className="row">
           <div className="col-md-3">
             <Card>
               <Card.Img variant="top" src="https://media.licdn.com/dms/image/D4D03AQGugz_KCLi9QQ/profile-displayphoto-shrink_200_200/0/1708515138790?e=2147483647&v=beta&t=fNXhn-nPUE8NbcSuuTvynoSr216lFYcNe_6w8x2NFLA"
-
                 height={300} />
               <Card.Body>
-                <Card.Title> Coder Swami</Card.Title>
+                <Card.Title>Coder Swami</Card.Title>
                 <Card.Text>
-                  Percentage :- 35%
+                  Percentage :- 35%<br />
                   University :- Pune University
                 </Card.Text>
                 <Button variant="primary">Know More</Button>
@@ -249,8 +231,8 @@ const OurStudent = () => {
               <Card.Body>
                 <Card.Title>Sushant Nehe</Card.Title>
                 <Card.Text>
-                  Percentage :- 52%
-                  University :- Karntaka University
+                  Percentage :- 52%<br />
+                  University :- Karnataka University
                 </Card.Text>
                 <Button variant="primary">Know More</Button>
               </Card.Body>
@@ -265,7 +247,7 @@ const OurStudent = () => {
               <Card.Body>
                 <Card.Title>Vaibhav Sonawane</Card.Title>
                 <Card.Text>
-                  Percentage :- 89%
+                  Percentage :- 89%<br />
                   University :- Mumbai University
                 </Card.Text>
                 <Button variant="primary">Know More</Button>
@@ -281,18 +263,17 @@ const OurStudent = () => {
               <Card.Body>
                 <Card.Title>Sahil Sonawane</Card.Title>
                 <Card.Text>
-                  Percentage :- 73%
+                  Percentage :- 73%<br />
                   University :- Mysore University
                 </Card.Text>
                 <Button variant="primary">Know More</Button>
               </Card.Body>
             </Card>
           </div>
-
         </div>
       </div>
     </div>
   );
 };
 
-export default OurStudent;
+export default withTranslation()  (OurStudent);
