@@ -140,19 +140,19 @@ const Footer = () => {
           </div>
           <div className="row allicon mt-5">
             <div className="col text-center">
-              <a href="#!" className="text-white Facebook-icon mr-5">
+              <a href="https://www.facebook.com/baap.company/" className="text-white Facebook-icon mr-5">
                 <FaFacebookF />
               </a>
-              <a href="#!" className="text-white Instagram-icon mr-5">
+              <a href="https://www.instagram.com/the_baap_company/?hl=en" className="text-white Instagram-icon mr-5">
                 <FaInstagram />
               </a>
-              <a href="#!" className="text-white Linkedin-icon mr-5">
+              <a href="https://baapcompany.com/" className="text-white Linkedin-icon mr-5">
                 <FaTwitter />
               </a>
-              <a href="#!" className="text-white Youtube-icon mr-5">
+              <a href="https://www.youtube.com/@baapcompany" className="text-white Youtube-icon mr-5">
                 <FaYoutube />
               </a>
-              <a href="#!" className="text-white  Linkedin-icon">
+              <a href="https://www.linkedin.com/company/baapcompany/?originalSubdomain=in" className="text-white  Linkedin-icon">
                 <FaLinkedinIn />
               </a>
             </div>
