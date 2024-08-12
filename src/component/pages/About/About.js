@@ -55,4 +55,4 @@ const About = () => {
     );
 }
 
-export default withTranslation() (About);
+export default withTranslation()(About);
