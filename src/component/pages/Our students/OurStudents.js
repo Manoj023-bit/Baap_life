@@ -170,41 +170,45 @@ const OurStudent = () => {
         </div>
       </div>
       {isMainHovered && activeSubButton && (
-        <div className="table-container">
-          <h1 className='h1'>
-            {t(`students.${activeSubButton}`)}
-          </h1>
-          <table>
-            <thead>
-              <tr>
-                <th>{t('students.name')}</th>
-                <th>{t('students.email')}</th>
-                <th>{t('students.branch')}</th>
-                <th>{t('students.grade')}</th>
-                <th>{t('students.mobile')}</th>
-                <th>{t('students.year')}</th>
-                <th>{t('students.city')}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {(activeSubButton === "all"
-                ? allStudentsData
-                : studentData[activeSubButton]
-              )?.map((student, index) => (
-                <tr key={index}>
-                  <td>{student.name}</td>
-                  <td>{student.email}</td>
-                  <td>{student.branch}</td>
-                  <td>{student.grade}</td>
-                  <td>{student.mobile}</td>
-                  <td>{student.year}</td>
-                  <td>{student.city}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+  <div className="table-container">
+    <h1 className='h1'>
+      {activeSubButton === "all"
+        ? "All Students" 
+        : t(`students.${activeSubButton}`) 
+      }
+    </h1>
+    <table>
+      <thead>
+        <tr>
+          <th>{t('students.name')}</th>
+          <th>{t('students.email')}</th>
+          <th>{t('students.branch')}</th>
+          <th>{t('students.grade')}</th>
+          <th>{t('students.mobile')}</th>
+          <th>{t('students.year')}</th>
+          <th>{t('students.city')}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {(activeSubButton === "all"
+          ? allStudentsData
+          : studentData[activeSubButton]
+        )?.map((student, index) => (
+          <tr key={index}>
+            <td>{student.name}</td>
+            <td>{student.email}</td>
+            <td>{student.branch}</td>
+            <td>{student.grade}</td>
+            <td>{student.mobile}</td>
+            <td>{student.year}</td>
+            <td>{student.city}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}
+
       <div className='footer'>
         <h1 className='passout'>{t('students.passout')}</h1>
         <div className="row">
@@ -215,7 +219,7 @@ const OurStudent = () => {
               <Card.Body>
                 <Card.Title>Coder Swami</Card.Title>
                 <Card.Text>
-                  Percentage :- 35%<br />
+                  Percentage :- 35%<br /> 
                   University :- Pune University
                 </Card.Text>
                 <Button variant="primary">Know More</Button>
@@ -276,4 +280,5 @@ const OurStudent = () => {
   );
 };
 
-export default withTranslation()  (OurStudent);
+export default withTranslation()(OurStudent);
+    

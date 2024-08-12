@@ -30,10 +30,10 @@ const CustomNavbar = () => {
                 {t('navbar.call')}: +91 9689092360
                 <span className='ml-2 line'> | </span>
               </Nav.Item>
-              <Nav.Link href="#" className='Facebook-icon'><FaFacebookF /></Nav.Link>
-              <Nav.Link href="#" className='Instagram-icon'><FaInstagram /></Nav.Link>
-              <Nav.Link href="#" className='Youtube-icon'><FaYoutube /></Nav.Link>
-              <Nav.Link href="#" className='Linkedin-icon'><FaLinkedinIn /></Nav.Link>
+              <Nav.Link href="https://www.facebook.com/baap.company/" className='Facebook-icon'><FaFacebookF /></Nav.Link>
+              <Nav.Link href="https://www.instagram.com/the_baap_company/?hl=en" className='Instagram-icon'><FaInstagram /></Nav.Link>
+              <Nav.Link href="https://www.youtube.com/@baapcompany" className='Youtube-icon'><FaYoutube /></Nav.Link>
+              <Nav.Link href="https://www.linkedin.com/company/baapcompany/?originalSubdomain=in" className='Linkedin-icon'><FaLinkedinIn /></Nav.Link>
               <li>
                 <button className='btn btn-outline-primary ml-2' onClick={() => changeLanguage('en')}>English</button>
                 <button className='btn btn-outline-primary ml-2' onClick={() => changeLanguage('mr')}>Marathi</button>
