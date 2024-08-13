@@ -64,46 +64,11 @@ const Sport = () => {
           <h1>{t('sport.benefitsTitle')}</h1>
           <h4>{t('sport.benefitsDescription')}</h4>
         </div>
+
+
         <div className="Sec_div">
-          <div className="Health">
-            <div className="Health-fit">
-              <h5>{t('sport.healthFitness')}</h5>
-            </div>
-            <div className="Health_imp">
-              <h1>{t('sport.healthFitnessTitle')}</h1>
-              <p>{t('sport.healthFitnessDescription')}</p>
-            </div>
-          </div>
+         <img src="https://cdn-cms.orchidsinternationalschool.com/blog/Right-Age-to-Start-Sportmm83jxo4.jpg" className="image"></img>
 
-          <div className="Health">
-            <div className="Achievement">
-              <h5>{t('sport.achievement')}</h5>
-            </div>
-            <div className="Achievement_imp">
-              <h1>{t('sport.achievementTitle')}</h1>
-              <p>{t('sport.achievementDescription')}</p>
-            </div>
-          </div>
-
-          <div className="Health">
-            <div className="Life_Skills">
-              <h5>{t('sport.lifeSkills')}</h5>
-            </div>
-            <div className="Skill_imp">
-              <h1>{t('sport.lifeSkillsTitle')}</h1>
-              <p>{t('sport.lifeSkillsDescription')}</p>
-            </div>
-          </div>
-
-          <div className="Health">
-            <div className="Sport">
-              <h5>{t('sport.loveOfSports')}</h5>
-            </div>
-            <div className="Sport_imp">
-              <h1>{t('sport.loveOfSportsTitle')}</h1>
-              <p>{t('sport.loveOfSportsDescription')}</p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -149,7 +114,7 @@ const Sport = () => {
             <h1 className="circleh1">{t('sport.ageGroup3Title')}</h1>
             <h1 className="circleh2">{t('sport.ageGroup3Subtitle')}</h1>
             <div className="circle-dots">
-              <div className="dot" style={{ backgroundColor: '#0099CC' }} />
+              <div className="dot" style={{ backgroundColor: '#90EE90' }} />
               <div className="dot" style={{ backgroundColor: '#FFFF00' }} />
               <div className="dot" style={{ backgroundColor: '#FF0000' }} />
             </div>
@@ -162,6 +127,7 @@ const Sport = () => {
           </div>
         </div>
       </div>
+      <hr></hr>
     </div>
   );
 };
