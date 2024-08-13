@@ -2,12 +2,13 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './About.css';
 import { withTranslation } from 'react-i18next';
-
+import ScrollToTop from '../ScrollToTop';
 const About = () => {
     const { t } = useTranslation();
 
     return (
         <>
+            <ScrollToTop /> 
             <div className='About'>
                 <div className="aboutcontainer">
                     <div className="about-breadcrumb">

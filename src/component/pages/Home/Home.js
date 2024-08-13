@@ -3,7 +3,7 @@ import "./Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { withTranslation } from 'react-i18next';
-
+import ScrollToTop from '../ScrollToTop';
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -44,6 +44,8 @@ class Home extends React.Component {
 
     return (
       <div>
+        <ScrollToTop /> 
+        
         {/* carousel */}
         <div className="carousel">
           <img
