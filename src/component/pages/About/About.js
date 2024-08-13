@@ -8,7 +8,7 @@ const About = () => {
 
     return (
         <>
-            <ScrollToTop /> 
+        <ScrollToTop />
             <div className='About'>
                 <div className="aboutcontainer">
                     <div className="about-breadcrumb">
