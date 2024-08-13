@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Sport.css";
 import { useTranslation } from 'react-i18next';
 import { withTranslation } from 'react-i18next';
-import ScrollToTop from "../ScrollToTop";
-
 
 const Sport = () => {
   const images = [
@@ -25,8 +23,8 @@ const Sport = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
+    autoplaySpeed: 3000, // Image should change every 3 seconds
+    pauseOnHover: true,  // Image will pause if user hovers over it
     responsive: [
       {
         breakpoint: 768,
@@ -49,9 +47,15 @@ const Sport = () => {
     ],
   };
 
+  // Optional: Force slider to change every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      document.querySelector('.slick-next').click();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <>
-    <ScrollToTop/>
     <div>
       <div className="slider-container">
         <Slider {...settings}>
@@ -69,10 +73,8 @@ const Sport = () => {
           <h4>{t('sport.benefitsDescription')}</h4>
         </div>
 
-
         <div className="Sec_div">
-         <img src="https://cdn-cms.orchidsinternationalschool.com/blog/Right-Age-to-Start-Sportmm83jxo4.jpg" className="image"></img>
-
+          <img src="https://cdn-cms.orchidsinternationalschool.com/blog/Right-Age-to-Start-Sportmm83jxo4.jpg" className="image" alt={t('sport.mainImageAlt')} />
         </div>
       </div>
 
@@ -131,9 +133,8 @@ const Sport = () => {
           </div>
         </div>
       </div>
-      <hr></hr>
+      <hr />
     </div>
-    </>
   );
 };
 
