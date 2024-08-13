@@ -150,3 +150,21 @@ body {
 .Linkedin-icon svg:hover {
   color: #0077b5;
 }
+
+
+.popup-welcome {
+  padding: 9px 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.popup-menu p {
+  margin: 0;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.popup-menu p:hover {
+  background-color: #cac6c6;
+}
+
