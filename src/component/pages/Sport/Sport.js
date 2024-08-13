@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Sport.css";
 import { useTranslation } from 'react-i18next';
 import { withTranslation } from 'react-i18next';
+import ScrollToTop from "../ScrollToTop";
+
 
 const Sport = () => {
   const images = [
@@ -48,6 +50,8 @@ const Sport = () => {
   };
 
   return (
+    <>
+    <ScrollToTop/>
     <div>
       <div className="slider-container">
         <Slider {...settings}>
@@ -129,6 +133,7 @@ const Sport = () => {
       </div>
       <hr></hr>
     </div>
+    </>
   );
 };
 

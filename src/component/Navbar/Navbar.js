@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaBars, FaTimes } fr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // Import NavLink
 import { useTranslation } from 'react-i18next';
 import Theme from '../Theme/Theme';
 
@@ -58,7 +58,7 @@ const CustomNavbar = () => {
               {/* Change Language Button */}
               <Nav.Item>
                 <div 
-                  className="language-icon-container "
+                  className="language-icon-container"
                   onClick={handleLanguagePopupToggle}
                   style={{ position: 'relative', marginTop: "0.8pc" }}
                 >
@@ -80,7 +80,7 @@ const CustomNavbar = () => {
                         padding: '10px',
                         borderRadius: '4px',
                         zIndex: 1000,
-                        width:'6pc'
+                        width: '6pc'
                       }}
                     >
                       <label>
@@ -90,7 +90,6 @@ const CustomNavbar = () => {
                           checked={selectedLanguage === 'en'}
                           onChange={() => changeLanguage('en')}
                         />
-                        
                         {t('buttons.English')}
                       </label>
                       <label>
@@ -115,34 +114,34 @@ const CustomNavbar = () => {
           </div>
           <ul className={isMobile ? 'nav-links-mobile' : 'nav-links'} onClick={() => setIsMobile(false)}>
             <li>
-              <Link to="/">
-                <a href="#home">{t('navbar.home')}</a>
-              </Link>
+              <NavLink to="/" activeClassName="active" exact>
+                {t('navbar.home')}
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">
-                <a href="#about">{t('navbar.about')}</a>
-              </Link>
+              <NavLink to="/about" activeClassName="active">
+                {t('navbar.about')}
+              </NavLink>
             </li>
             <li>
-              <Link to="/admission">
-                <a href="#admissions">{t('navbar.admissions')}</a>
-              </Link>
+              <NavLink to="/admission" activeClassName="active">
+                {t('navbar.admissions')}
+              </NavLink>
             </li>
             <li>
-              <Link to="/ourstudents">
-                <a href="#students">{t('navbar.students')}</a>
-              </Link>
+              <NavLink to="/ourstudents" activeClassName="active">
+                {t('navbar.students')}
+              </NavLink>
             </li>
             <li>
-              <Link to="/sports">
-                <a href="#sports">{t('navbar.sports')}</a>
-              </Link>
+              <NavLink to="/sports" activeClassName="active">
+                {t('navbar.sports')}
+              </NavLink>
             </li>
             <li>
-              <Link to="/health">
-                <a href="#health">{t('navbar.health')}</a>
-              </Link>
+              <NavLink to="/health" activeClassName="active">
+                {t('navbar.health')}
+              </NavLink>
             </li>
             <li className="mr-5">
               <Theme />

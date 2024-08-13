@@ -2,16 +2,16 @@ import React from 'react';
 import './Health.css';
 import { useTranslation } from 'react-i18next';
 import { withTranslation } from 'react-i18next';
-
+import ScrollToTop from '../ScrollToTop';
 const Health = () => {
   const { t } = useTranslation();
 
   return (
     <>
+    <ScrollToTop/>
       <div className='Health-bg-color'>
         <div className="health-center">
           <div className="header-health-main">
-            {/* Add content here if needed */}
           </div>
         </div>
 

@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import './OurStudents.css';
 import { useTranslation } from 'react-i18next';
 import { withTranslation } from 'react-i18next';
+import ScrollToTop from '../ScrollToTop';
 
 const OurStudent = () => {
   const [isMainHovered, setIsMainHovered] = useState(false);
@@ -112,6 +113,8 @@ const OurStudent = () => {
   };
 
   return (
+    <>
+    <ScrollToTop/>
     <div className="body1 mt-5">
       <div className="button-container">
         <div className="main-button-wrapper">
@@ -277,6 +280,7 @@ const OurStudent = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

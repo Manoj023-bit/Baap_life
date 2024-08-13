@@ -6,6 +6,7 @@ import "./Admission.css";
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { withTranslation } from 'react-i18next';
+import ScrollToTop from '../ScrollToTop';
 
 const Admission = () => {
   const initialFormData = {
@@ -106,7 +107,10 @@ const Admission = () => {
     }
   };
 
+  
   return (
+    <>
+    <ScrollToTop/>
     <div className='mainadd'>
       <div className="container ">
         <form onSubmit={handleSubmit}>
@@ -341,6 +345,7 @@ const Admission = () => {
         <ToastContainer />
       </div>
     </div>
+    </>
   );
 };
 
