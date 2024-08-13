@@ -65,7 +65,10 @@
   "buttons": {
     "home": "Home",
     "submit": "Submit",
-    "reset": "Reset"
+    "reset": "Reset",
+    "English":"English",
+    "Marathi":"Marathi"
+    
   },
   "about": {
     "title": "About School",

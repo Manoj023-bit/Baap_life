@@ -12,14 +12,12 @@ const CustomNavbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const { t, i18n } = useTranslation();
   const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
+    setSelectedLanguage(lang);
     setIsPopupVisible(false); // Close the popup after selecting a language
-  };
-
-  const handleMouseLeave = () => {
-    setIsPopupVisible(false);
   };
 
   const handleLanguagePopupToggle = () => {
@@ -57,39 +55,56 @@ const CustomNavbar = () => {
                 <FaLinkedinIn />
               </Nav.Link>
 
-             {/* Change Language Button */}
+              {/* Change Language Button */}
               <Nav.Item>
-              <div 
-                className="language-icon-container"
-                onClick={handleLanguagePopupToggle}
-                onMouseLeave={handleMouseLeave}
-                style={{ position: 'relative', marginTop:"0.8pc" }}>
-                <FontAwesomeIcon
-                  icon={faGlobe}
-                  className="icon-btn"
-                  title={t('Change Language')}
-                />
+                <div 
+                  className="language-icon-container "
+                  onClick={handleLanguagePopupToggle}
+                  style={{ position: 'relative', marginTop: "0.8pc" }}
+                >
+                  <FontAwesomeIcon
+                    icon={faGlobe}
+                    className="icon-btn"
+                    title={t('Change Language')}
+                  />
 
-                {isPopupVisible && (
-                  <div
-                    className="popup-menu"
-                    style={{
-                      position: 'absolute',
-                      top: '100%', // Position the menu below the icon
-                      right: 0, // Align the menu with the right edge of the icon
-                      backgroundColor: '#fff',
-                      boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-                      padding: '10px',
-                      borderRadius: '4px',
-                      zIndex: 1000,
-                    }}
-                  >
-                    <p onClick={() => changeLanguage('en')}>English</p>
-                    <p onClick={() => changeLanguage('mr')}>Marathi</p>
-                   
-                  </div>
-                )}
-              </div>
+                  {isPopupVisible && (
+                    <div
+                      className="popup-menu"
+                      style={{
+                        position: 'absolute',
+                        top: '100%', // Position the menu below the icon
+                        right: 0, // Align the menu with the right edge of the icon
+                        backgroundColor: '#fff',
+                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                        padding: '10px',
+                        borderRadius: '4px',
+                        zIndex: 1000,
+                        width:'6pc'
+                      }}
+                    >
+                      <label>
+                        <input
+                          type="radio"
+                          value="en"
+                          checked={selectedLanguage === 'en'}
+                          onChange={() => changeLanguage('en')}
+                        />
+                        
+                        {t('buttons.English')}
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          value="mr"
+                          checked={selectedLanguage === 'mr'}
+                          onChange={() => changeLanguage('mr')}
+                        />
+                        {t('buttons.Marathi')}
+                      </label>
+                    </div>
+                  )}
+                </div>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

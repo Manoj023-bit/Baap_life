@@ -65,7 +65,9 @@
   "buttons": {
     "home": "मुख्यपृष्ठ",
     "submit": "सबमिट",
-    "reset": "रीसेट"
+    "reset": "रीसेट",
+    "English": "इंग्रजी",
+    "Marathi":"मराठी"
   },
   "about": {
     "title": "शाळेबद्दल",
