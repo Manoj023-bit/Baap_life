@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Theme.css';
-
 function Theme() {
   const [theme, setTheme] = useState('light');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const { t } = useTranslation();
-
   useEffect(() => {
     document.querySelector('html').setAttribute('data-theme', theme);
     document.documentElement.classList.add('color-theme-in-transition');
