@@ -315,19 +315,26 @@ const Admission = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="form-group">
-                <label htmlFor="class">{t('formLabels.class')}</label>
-                <input
-                  type="text"
-                  className={`form-control ${errors.class ? 'is-invalid' : ''}`}
-                  id="class"
-                  name="class"
-                  value={formData.class}
-                  onChange={handleChange}
-                />
-                {errors.class && <div className="invalid-feedback">{errors.class}</div>}
-              </div>
-            </div>
+    <div className="form-group">
+        <label htmlFor="class">{t('formLabels.class')}</label>
+        <select
+            className={`form-control ${errors.class ? 'is-invalid' : ''}`}
+            id="class"
+            name="class"
+            value={formData.class}
+            onChange={handleChange}
+        >
+            <option value="">Select Class</option>  
+            <option value="class1">First</option>
+            <option value="class2">Second</option>
+            <option value="class3">Third</option>
+            <option value="class4">Fourth</option>
+            <option value="class5">Fifth</option>
+        </select>
+        {errors.class && <div className="invalid-feedback">{errors.class}</div>}
+    </div>
+</div>
+
           </div>
           <div className="btn-all">
             <Link to='/'> <button type="button" className="btn btn-success w-10">
