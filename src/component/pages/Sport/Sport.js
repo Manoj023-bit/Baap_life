@@ -24,7 +24,7 @@ const Sport = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000, // Image should change every 3 seconds
-    pauseOnHover: true,  // Image will pause if user hovers over it
+    pauseOnHover: true,  // Image will pause if the user hovers over it
     responsive: [
       {
         breakpoint: 768,
@@ -57,42 +57,46 @@ const Sport = () => {
 
   return (
     <div>
-      <div className="slider-container">
+      <div className="sport-slider-container">
         <Slider {...settings}>
           {images.map((url, index) => (
             <div key={index}>
-              <img src={url} alt={t(`sport.slideAlt${index + 1}`)} className="slider-image" />
+              <img src={url} alt={t(`sport.slideAlt${index + 1}`)} className="sport-slider-image" />
             </div>
           ))}
         </Slider>
       </div>
 
-      <div className="main_div">
-        <div className="first_div">
+      <div className="sport-main-content">
+        <div className="sport-text-content">
           <h1>{t('sport.benefitsTitle')}</h1>
           <h4>{t('sport.benefitsDescription')}</h4>
         </div>
 
-        <div className="Sec_div">
-          <img src="https://cdn-cms.orchidsinternationalschool.com/blog/Right-Age-to-Start-Sportmm83jxo4.jpg" className="image" alt={t('sport.mainImageAlt')} />
+        <div className="sport-image-container">
+          <img
+            src="https://cdn-cms.orchidsinternationalschool.com/blog/Right-Age-to-Start-Sportmm83jxo4.jpg"
+            className="sport-main-image"
+            alt={t('sport.mainImageAlt')}
+          />
         </div>
       </div>
 
       <br />
 
-      <div className="container1">
-        <h1 className="title1">{t('sport.ageGroupTitle')}</h1>
-        <h3 className="subtitle">{t('sport.ageGroupSubtitle')}</h3>
-        <div className="circles">
-          <div className="circle" style={{ backgroundColor: '#0099CC' }}>
-            <h1 className="circleh1">{t('sport.ageGroup1Title')}</h1>
-            <h1 className="circleh2">{t('sport.ageGroup1Subtitle')}</h1>
-            <div className="circle-dots">
-              <div className="dot" style={{ backgroundColor: '#FFA500' }} />
-              <div className="dot" style={{ backgroundColor: '#FFFF00' }} />
-              <div className="dot" style={{ backgroundColor: '#FF0000' }} />
+      <div className="sport-age-group-container">
+        <h1 className="sport-age-group-title">{t('sport.ageGroupTitle')}</h1>
+        <h3 className="sport-age-group-subtitle">{t('sport.ageGroupSubtitle')}</h3>
+        <div className="sport-age-group-circles">
+          <div className="sport-age-group-circle" style={{ backgroundColor: '#0099CC' }}>
+            <h1 className="sport-age-group-circle-title">{t('sport.ageGroup1Title')}</h1>
+            <h1 className="sport-age-group-circle-subtitle">{t('sport.ageGroup1Subtitle')}</h1>
+            <div className="sport-circle-dots">
+              <div className="sport-circle-dot" style={{ backgroundColor: '#FFA500' }} />
+              <div className="sport-circle-dot" style={{ backgroundColor: '#FFFF00' }} />
+              <div className="sport-circle-dot" style={{ backgroundColor: '#FF0000' }} />
             </div>
-            <ul className="circle-text">
+            <ul className="sport-circle-text">
               <li>{t('sport.ageGroup1Desc1')}</li>
               <li>{t('sport.ageGroup1Desc2')}</li>
               <li>{t('sport.ageGroup1Desc3')}</li>
@@ -100,15 +104,15 @@ const Sport = () => {
             </ul>
           </div>
 
-          <div className="circle" style={{ backgroundColor: '#FFA500' }}>
-            <h1 className="circleh1">{t('sport.ageGroup2Title')}</h1>
-            <h1 className="circleh2">{t('sport.ageGroup2Subtitle')}</h1>
-            <div className="circle-dots">
-              <div className="dot" style={{ backgroundColor: '#0099CC' }} />
-              <div className="dot" style={{ backgroundColor: '#90EE90' }} />
-              <div className="dot" style={{ backgroundColor: '#FF0000' }} />
+          <div className="sport-age-group-circle" style={{ backgroundColor: '#FFA500' }}>
+            <h1 className="sport-age-group-circle-title">{t('sport.ageGroup2Title')}</h1>
+            <h1 className="sport-age-group-circle-subtitle">{t('sport.ageGroup2Subtitle')}</h1>
+            <div className="sport-circle-dots">
+              <div className="sport-circle-dot" style={{ backgroundColor: '#0099CC' }} />
+              <div className="sport-circle-dot" style={{ backgroundColor: '#90EE90' }} />
+              <div className="sport-circle-dot" style={{ backgroundColor: '#FF0000' }} />
             </div>
-            <ul className="circle-text">
+            <ul className="sport-circle-text">
               <li>{t('sport.ageGroup2Desc1')}</li>
               <li>{t('sport.ageGroup2Desc2')}</li>
               <li>{t('sport.ageGroup2Desc3')}</li>
@@ -116,15 +120,15 @@ const Sport = () => {
             </ul>
           </div>
 
-          <div className="circle" style={{ backgroundColor: '#0099CC' }}>
-            <h1 className="circleh1">{t('sport.ageGroup3Title')}</h1>
-            <h1 className="circleh2">{t('sport.ageGroup3Subtitle')}</h1>
-            <div className="circle-dots">
-              <div className="dot" style={{ backgroundColor: '#90EE90' }} />
-              <div className="dot" style={{ backgroundColor: '#FFFF00' }} />
-              <div className="dot" style={{ backgroundColor: '#FF0000' }} />
+          <div className="sport-age-group-circle" style={{ backgroundColor: '#0099CC' }}>
+            <h1 className="sport-age-group-circle-title">{t('sport.ageGroup3Title')}</h1>
+            <h1 className="sport-age-group-circle-subtitle">{t('sport.ageGroup3Subtitle')}</h1>
+            <div className="sport-circle-dots">
+              <div className="sport-circle-dot" style={{ backgroundColor: '#90EE90' }} />
+              <div className="sport-circle-dot" style={{ backgroundColor: '#FFFF00' }} />
+              <div className="sport-circle-dot" style={{ backgroundColor: '#FF0000' }} />
             </div>
-            <ul className="circle-text">
+            <ul className="sport-circle-text">
               <li>{t('sport.ageGroup3Desc1')}</li>
               <li>{t('sport.ageGroup3Desc2')}</li>
               <li>{t('sport.ageGroup3Desc3')}</li>
